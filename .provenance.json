@@ -1,0 +1,102 @@
+﻿[
+    {
+        "File":  "table.f3d",
+        "Author":  "Eshant Sonhar",
+        "Copyright":  "© 2026 Eshant Sonhar",
+        "Project":  "Betterdesk",
+        "ProjectID":  null,
+        "SHA256":  "970281A2AA73932E6B6EE1CC31F2BF27F69B8BC48FCCC2B1440D15B2F75F1956",
+        "SHA512":  "4182A3B736791E00939FBD4885FAF97DFB58B8F75D6EF972CF257E5B55DC5F0FA5916172BF3838EBC9C76DE0C4E076ECB0E420C95C05F7A561B85A0EB2DACB24",
+        "HMAC":  null
+    },
+    {
+        "File":  "tablev2.f3d",
+        "Author":  "Eshant Sonhar",
+        "Copyright":  "© 2026 Eshant Sonhar",
+        "Project":  "Betterdesk",
+        "ProjectID":  null,
+        "SHA256":  "FD98FD9EB5619A2A4046233F153CBB03D249F925525BA7A1303224AE8D8C3E71",
+        "SHA512":  "B4FEE90FACB9034CD2CD21977A2FDF214157FF23F030D0E885C24B156BC519BDD25EDBA183A685D23DAC7820726D85FEDE1A36A038C2D2006A030FD4B3A1AB4A",
+        "HMAC":  null
+    },
+    {
+        "File":  "tablev3.f3d",
+        "Author":  "Eshant Sonhar",
+        "Copyright":  "© 2026 Eshant Sonhar",
+        "Project":  "Betterdesk",
+        "ProjectID":  null,
+        "SHA256":  "290A86CD8E2ABBB56A0C7896772F639E079199CD15104FC35AA4BB329106AF79",
+        "SHA512":  "9B733C82CAE5353D997E17F10DD16F2FBBBA6298408DAC45C87D23AE8EC2311ECD0AC23339F2FFC53E16AD8C655863F2574E9827C0E811C560F3878919EDEE2B",
+        "HMAC":  null
+    },
+    {
+        "File":  "tablev4.f3d",
+        "Author":  "Eshant Sonhar",
+        "Copyright":  "© 2026 Eshant Sonhar",
+        "Project":  "Betterdesk",
+        "ProjectID":  null,
+        "SHA256":  "ADE8BFEF738464D704D1A1A4D93DC8C4579668CA4B0F11A8C114AED1FC712F56",
+        "SHA512":  "5DC89D3AFFEB4B76018294CBE34AC9FE20A35A93A22AC6DD0C91DAB22CC5D520B25D13D60B7A1D30E02C4D0BF1F9AFB773AF972AE894572B1F8DEB8A435AC7C6",
+        "HMAC":  null
+    },
+    {
+        "File":  "tablev5.f3d",
+        "Author":  "Eshant Sonhar",
+        "Copyright":  "© 2026 Eshant Sonhar",
+        "Project":  "Betterdesk",
+        "ProjectID":  null,
+        "SHA256":  "25230D23A56D84131AA94245CD472906D247D47A9B1FB286E3566F64BC6EBC0E",
+        "SHA512":  "8484C65CAC216F871421FA182D956DCE80BCA1A662FA6342A60CE571362DFA65E58F999842759FFC7AE494367AECB5657890038040EF68B71B6C93659FEDACC1",
+        "HMAC":  null
+    },
+    {
+        "File":  "tablev5.1.f3d",
+        "Author":  "Eshant Sonhar",
+        "Copyright":  "© 2026 Eshant Sonhar",
+        "Project":  "Betterdesk",
+        "ProjectID":  null,
+        "SHA256":  "6BE95E714522C7B0CCC296305B6AC243B4D52B204D658C2C4CDAC77B5FF2FA8C",
+        "SHA512":  "B2486FC1BB3E013B08F636E8E71F86CC35DD0D0ED4E8165700CC232C26A43F65F9252B5823DBEB3411C8F3F412B4D544DC0068BD8B09E3788B958312BCB3520A",
+        "HMAC":  null
+    },
+    {
+        "File":  "tablev6.f3d",
+        "Author":  "Eshant Sonhar",
+        "Copyright":  "© 2026 Eshant Sonhar",
+        "Project":  "Betterdesk",
+        "ProjectID":  null,
+        "SHA256":  "DBEF05E7B8F897BF836D37F2B6EBC61EB479EA2827D2F8188E1BF28C76C8061B",
+        "SHA512":  "6DFEA38366F462E69E3BEAECDD7BEB475195CBA5FC305CC8FD312F4EB88F913A7005B3C637B98BDAC9DCB64E7440070795E3D00837E4AA7A191584EF9CEC1A32",
+        "HMAC":  null
+    },
+    {
+        "File":  "tablev6.1.f3d",
+        "Author":  "Eshant Sonhar",
+        "Copyright":  "© 2026 Eshant Sonhar",
+        "Project":  "Betterdesk",
+        "ProjectID":  null,
+        "SHA256":  "F9254310BAE31E57C113ED3C97572144049FCC9FE66C2E661331518442CECD28",
+        "SHA512":  "45AC02B46B22434345E0FA7B48F48EF7AB65B3356BDCACCA37EE3F6E7EAE44F967F29A7C700DC1D75094CF56C841C4371BE947771C725CB2EEF870AEAE73FAE3",
+        "HMAC":  null
+    },
+    {
+        "File":  "tablev6.2.f3d",
+        "Author":  "Eshant Sonhar",
+        "Copyright":  "© 2026 Eshant Sonhar",
+        "Project":  "Betterdesk",
+        "ProjectID":  null,
+        "SHA256":  "265CB24368E6E26D554032A23378CAE82AFEF0E2BBA3DC42808F8BD1AD7739CF",
+        "SHA512":  "4B049593E51B150414BA0F0A08B1191056459AA1DC56F0B479A5AAC64C2737AA890E1CEE4C3929E17D61FB36AEC8A276D7BE1F20C8BECAC223BB542546CAD269",
+        "HMAC":  null
+    },
+    {
+        "File":  "tablev7.f3d",
+        "Author":  "Eshant Sonhar",
+        "Copyright":  "© 2026 Eshant Sonhar",
+        "Project":  "Betterdesk",
+        "ProjectID":  null,
+        "SHA256":  "177CD7B2E81536C07B24A5018309D86B233426D14D7823D996845FAB17DB8B09",
+        "SHA512":  "608E6B255B2DB9D0EB345954509671A6F255D3DD3BC4E001D466AABE7DD56D3190A7E21B50A7681D00D346D88956D7DE611003CF70B7E1057946F0DC4C80F05F",
+        "HMAC":  null
+    }
+]
