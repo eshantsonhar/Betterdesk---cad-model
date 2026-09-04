@@ -7,12 +7,12 @@ title Table STL to STEP Converter
 set "PROJ_DIR=%~dp0"
 if "%PROJ_DIR:~-1%"=="\" set "PROJ_DIR=%PROJ_DIR:~0,-1%"
 
-set "ARCHIVE_FILE=%PROJ_DIR%\final_table_1.5m.7z"
+set "ARCHIVE_FILE=%PROJ_DIR%\final_table_1-5m.7z"
 set "EXTRACT_DIR=%PROJ_DIR%\input_extracted"
 set "OUTPUT_DIR=%PROJ_DIR%\output"
 set "BUILD_DIR=%PROJ_DIR%\build"
 set "CONVERTER_DIR=%PROJ_DIR%\2STEP-Converter"
-set "OUTPUT_STEP=%OUTPUT_DIR%\final_table_1.5m.step"
+set "OUTPUT_STEP=%OUTPUT_DIR%\final_table_1-5m.step"
 
 echo ========================================
 echo Table STL -^> STEP Converter
