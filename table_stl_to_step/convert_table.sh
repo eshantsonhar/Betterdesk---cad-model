@@ -10,7 +10,11 @@ echo ""
 # Get script directory
 PROJ_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-ARCHIVE_FILE="${PROJ_DIR}/final_table_1-5m.7z"
+if [ -f "${PROJ_DIR}/final_table_1.5m.7z" ]; then
+    ARCHIVE_FILE="${PROJ_DIR}/final_table_1.5m.7z"
+else
+    ARCHIVE_FILE="${PROJ_DIR}/final_table_1-5m.7z"
+fi
 EXTRACT_DIR="${PROJ_DIR}/input_extracted"
 OUTPUT_DIR="${PROJ_DIR}/output"
 BUILD_DIR="${PROJ_DIR}/build"
@@ -81,10 +85,10 @@ _SPEC="${CONVERTER_DIR}/src/environment.yml"
 ARCH="$(uname -m)"
 if [ "$ARCH" = "arm64" ]; then
     MM_URL="https://github.com/mamba-org/micromamba-releases/releases/download/2.8.1-1/micromamba-osx-arm64"
-    _MM_SHA256="cebd3a18a996fbe53e346f0df5111d9cdb79fdd2db9675239e248bdfb1328b98"
+    _MM_SHA256="9618a2866a2ffb3d36b55e9520f64d63dcd6dc2e622a351ca3cbe8e2cc90c757"
 else
     MM_URL="https://github.com/mamba-org/micromamba-releases/releases/download/2.8.1-1/micromamba-osx-64"
-    _MM_SHA256="40c2dcfe8ef4045f8f5ea06e309cbdfca2e052300b9122cb4ed66a7b293ff5cd"
+    _MM_SHA256="d6fce18e56d7c6bf2331b0ee1b372a581c70f09b509cc9e924cdd131e053b58a"
 fi
 
 export MAMBA_ROOT_PREFIX="${_MM_ROOT}"
@@ -170,6 +174,65 @@ fi
 echo "${_SPEC_HASH}" > "${_SPEC_MARKER}"
 echo "2STEP Converter environment ready."
 
+# Configure 2STEP Converter to allow open surface shells and disable redundant validation
+mkdir -p "${CONVERTER_DIR}/data"
+cat << 'EOF' > "${CONVERTER_DIR}/data/config.json"
+{
+    "SEWING_TOLERANCE": 0.01,
+    "DEFAULT_REDUCTION_PERCENT": 0,
+    "AUTO_REDUCTION_ENABLED": true,
+    "AUTO_REDUCTION_TARGET_TRIANGLES": 50000,
+    "ASK_FOR_REDUCTION": true,
+    "SKIP_UP_TO_DATE_OUTPUTS": true,
+    "PLANAR_MERGE_ANGLE_RADIANS": 0.01,
+    "SEWING_TIMEOUT_SECONDS": 3600,
+    "SEW_PARTS_SEPARATELY": true,
+    "DEFAULT_STEP_FORMAT": "ap203",
+    "GENERATE_PNG_PREVIEW": true,
+    "INPUT_FOLDER_NAME": "models",
+    "CHECK_MESH_QUALITY": true,
+    "REPAIR_MESH_BEFORE_CONVERSION": true,
+    "VERTEX_MERGE_DISTANCE": 0.0,
+    "FIX_TRIANGLE_ORIENTATION": true,
+    "REMOVE_NON_MANIFOLD_TRIANGLES": false,
+    "REJECT_NON_MANIFOLD_MESH": false,
+    "FILL_SMALL_MESH_HOLES": false,
+    "FILL_SMALL_PLANAR_BREP_GAPS": true,
+    "MAX_BREP_GAP_EDGE_COUNT": 8,
+    "MAX_BREP_GAP_AREA_RATIO": 0.005,
+    "CHECK_SELF_INTERSECTIONS": true,
+    "SELF_INTERSECTION_CHECK_MAX_TRIANGLES": 50000,
+    "REJECT_SELF_INTERSECTING_MESH": false,
+    "USE_SCALE_AWARE_SEWING_TOLERANCE": true,
+    "SCALE_AWARE_SEWING_TOLERANCE_RATIO": 1e-06,
+    "REQUIRE_SOLID_OUTPUT": false,
+    "VALIDATE_STEP_AFTER_WRITING": false,
+    "PRESERVE_BOUNDARIES_DURING_REDUCTION": true,
+    "REDUCTION_BOUNDARY_WEIGHT": 10.0,
+    "MAX_REDUCTION_SIZE_CHANGE_PERCENT": 10.0,
+    "MAX_REDUCTION_VOLUME_CHANGE_PERCENT": 10.0,
+    "EXPERIMENTAL_PARAMETRIC_RECONSTRUCTION": false,
+    "EXPERIMENTAL_PARAMETRIC_FIT_ERROR_RATIO": 0.0005,
+    "EXPERIMENTAL_PARAMETRIC_MAX_VOLUME_CHANGE_PERCENT": 0.1,
+    "RECONSTRUCT_ANALYTIC_PRIMITIVES": true,
+    "ANALYTIC_PRIMITIVE_FIT_ERROR_RATIO": 0.001,
+    "ANALYTIC_PRIMITIVE_MIN_TRIANGLES": 32,
+    "RECONSTRUCT_ANALYTIC_THROUGH_HOLES": true,
+    "RECONSTRUCT_ANALYTIC_BLIND_HOLES": true,
+    "ANALYTIC_HOLE_FIT_ERROR_RATIO": 0.002,
+    "ANALYTIC_HOLE_MIN_SIDES": 12,
+    "ANALYTIC_HOLE_MAX_RADIUS_DIFFERENCE_RATIO": 0.002,
+    "ANALYTIC_HOLE_AXIS_TOLERANCE_RADIANS": 0.005,
+    "ANALYTIC_HOLE_MAX_VOLUME_CHANGE_PERCENT": 0.1,
+    "STL_FILE_EXTENSION": ".stl",
+    "THREE_MF_FILE_EXTENSION": ".3mf",
+    "OBJ_FILE_EXTENSION": ".obj",
+    "IGES_FILE_EXTENSION": ".igs",
+    "AMF_FILE_EXTENSION": ".amf",
+    "STEP_FILE_EXTENSION": ".stp"
+}
+EOF
+
 echo ""
 echo "[3/4] Extracting STL from archive..."
 echo "Archive: ${ARCHIVE_FILE}"
@@ -199,7 +262,7 @@ echo "[4/4] Converting STL -> STEP..."
 echo "Input STL:  \"${FOUND_STL}\""
 echo "Output STEP: \"${OUTPUT_STEP}\""
 
-"${_PY}" "${CONVERTER_DIR}/src/converter.py" "${FOUND_STL}" --output "${OUTPUT_STEP}" --reduce 0 --no-pause
+"${_PY}" "${CONVERTER_DIR}/src/converter.py" "${FOUND_STL}" --output "${OUTPUT_STEP}" --reduce 80 --no-pause
 if [ $? -ne 0 ]; then
     echo "[ERROR] Stage 4 Failed: Conversion from STL to STEP failed."
     echo ""
