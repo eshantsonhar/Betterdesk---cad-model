@@ -10,12 +10,12 @@ echo ""
 # Get script directory
 PROJ_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-ARCHIVE_FILE="${PROJ_DIR}/final_table_1.5m.7z"
+ARCHIVE_FILE="${PROJ_DIR}/final_table_1-5m.7z"
 EXTRACT_DIR="${PROJ_DIR}/input_extracted"
 OUTPUT_DIR="${PROJ_DIR}/output"
 BUILD_DIR="${PROJ_DIR}/build"
 CONVERTER_DIR="${PROJ_DIR}/2STEP-Converter"
-OUTPUT_STEP="${OUTPUT_DIR}/final_table_1.5m.step"
+OUTPUT_STEP="${OUTPUT_DIR}/final_table_1-5m.step"
 
 echo "[1/4] Preparing 2STEP Converter..."
 
