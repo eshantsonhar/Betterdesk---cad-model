@@ -30,12 +30,11 @@ Instead, the repository includes the original model data archive and an automate
 
 ##  Conversion Time
 
-> [!NOTE]
-> **This process may take a LOTTTTTT of time (often 15-30 minutes or more depending on your computer's CPU speed).**
-> 
-> The desk assembly contains over **1,500 individual solid bodies** and **~260,000 faces**. The automated OpenCASCADE geometry repair, topology validation and STEP serialization phases are heavily CPU-intensive. 
-> 
-> Please keep your terminal or command prompt open and allow the process to finish until the `SUCCESS` message is displayed.
+ **This process may take a LOTTTTTT of time (often 15-30 minutes or more depending on your computer's CPU speed).**
+
+The desk assembly contains over **1,500 individual solid bodies** and **~260,000 faces**. The automated OpenCASCADE geometry repair, topology validation and STEP serialization phases are heavily CPU-intensive. 
+
+Please keep your terminal or command prompt open and allow the process to finish until the `SUCCESS` message is displayed.
 
 ---
 
