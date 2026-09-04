@@ -8,13 +8,13 @@ Instead, the repository includes the original model data archive and an automate
 
 ## How to Generate the STEP Model
 
-### 🪟 On Windows
+###  On Windows
 1. Ensure [7-Zip](https://www.7-zip.org/) is installed on your computer.
 2. Open the `table_stl_to_step` folder.
 3. Double-click `convert_table.bat`.
 4. The script will set up the environment, extract the model, and convert it to STEP format.
 
-### 🍎 On macOS
+###  On macOS
 1. Install **7-Zip** via Homebrew (if not already installed):
    ```bash
    brew install sevenzip
@@ -28,12 +28,12 @@ Instead, the repository includes the original model data archive and an automate
 
 ---
 
-## ⏱️ Conversion Time Notice
+##  Conversion Time
 
 > [!NOTE]
-> **This process may take a significant amount of time (often 15 to 30 minutes or more depending on your computer's CPU speed).**
+> **This process may take a LOTTTTTT of time (often 15-30 minutes or more depending on your computer's CPU speed).**
 > 
-> The desk assembly contains over **1,500 individual solid bodies** and **~260,000 faces**. The automated OpenCASCADE geometry repair, topology validation, and STEP serialization phases are heavily CPU-intensive. 
+> The desk assembly contains over **1,500 individual solid bodies** and **~260,000 faces**. The automated OpenCASCADE geometry repair, topology validation and STEP serialization phases are heavily CPU-intensive. 
 > 
 > Please keep your terminal or command prompt open and allow the process to finish until the `SUCCESS` message is displayed.
 
