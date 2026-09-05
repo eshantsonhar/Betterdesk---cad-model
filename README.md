@@ -31,7 +31,7 @@ Instead, the repository includes the original model data archive and an automate
    chmod +x linux_stl_to_step.sh
    ```
 3. ```bash
-   ./convert_table.sh
+   ./linux_stl_to_step.sh
    ```
 4. The script will set up the environment, extract the model, and convert it to STEP format.
 p.s this has only been tested on kubuntu lts 24
