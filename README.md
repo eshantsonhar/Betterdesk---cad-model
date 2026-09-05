@@ -45,6 +45,7 @@ The desk assembly contains over **1,500 individual solid bodies** and **~260,000
 
 Please keep your terminal or command prompt open and allow the process to finish until the `SUCCESS` message is displayed.
 
+It also has a tendency to crash, especially on the linux version if you are using a low end computer without a dedicated gpu.
 ---
 
 ## Output Files
